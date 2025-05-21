@@ -1,44 +1,60 @@
- * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f7f7f7;
-      color: #333;
-    }
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+  overflow: hidden;
+}
 
-    nav {
-      background-color: #222;
-      padding: 1rem;
-    }
+/* Sticky Nav Styling */
+nav {
+  z-index: 999;
+}
 
-    .nav {
-      display: flex;
-      list-style: none;
-      justify-content: center;
-      gap: 20px;
-    }
+.nav {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 20px;
+}
 
-    .nav li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 5px 10px;
-      transition: background 0.3s ease;
-    }
+.nav-link {
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
 
-    .nav li a:hover {
-      background-color: #444;
-      border-radius: 4px;
-    }
+.nav-link:hover {
+  background-color: #444;
+  border-radius: 4px;
+}
 
-   .profile{
-      border-radius: 50%;
-      width: 300px;
-      height: 300px;
-      margin-bottom: 1rem;
-    }
+/* Scroll Container */
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Full Page Sections */
+.page {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Section backgrounds (optional) */
+#home { background-color: #f8f9fa; }
+#about { background-color: #e3f2fd; }
+#skills { background-color: #e8f5e9; }
+#portfolio { background-color: #fff3e0; }
